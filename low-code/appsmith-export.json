@@ -1,0 +1,1741 @@
+{
+  "sourceWorkflowList": [],
+  "artifactJsonType": "APPLICATION",
+  "clientSchemaVersion": 2,
+  "serverSchemaVersion": 13,
+  "exportedApplication": {
+    "name": "Smart Campus Checker P13 (low-code)",
+    "isPublic": true,
+    "pages": [
+      {
+        "id": "Page1",
+        "isDefault": true
+      }
+    ],
+    "publishedPages": [
+      {
+        "id": "Page1",
+        "isDefault": true
+      }
+    ],
+    "viewMode": false,
+    "appIsExample": false,
+    "unreadCommentThreads": 0,
+    "color": "#F3F1C7",
+    "slug": "smart-campus-checker-p13-low-code",
+    "unpublishedCustomJSLibs": [],
+    "publishedCustomJSLibs": [],
+    "evaluationVersion": 2,
+    "applicationVersion": 2,
+    "collapseInvisibleWidgets": true,
+    "isManualUpdate": false,
+    "deleted": false
+  },
+  "datasourceList": [],
+  "customJSLibList": [],
+  "pageList": [
+    {
+      "unpublishedPage": {
+        "name": "Page1",
+        "slug": "page1",
+        "layouts": [
+          {
+            "viewMode": false,
+            "dsl": {
+              "widgetName": "MainContainer",
+              "backgroundColor": "none",
+              "rightColumn": 4896,
+              "snapColumns": 64,
+              "detachFromLayout": true,
+              "widgetId": "0",
+              "topRow": 0,
+              "bottomRow": 730,
+              "containerStyle": "none",
+              "snapRows": 124,
+              "parentRowSpace": 1,
+              "type": "CANVAS_WIDGET",
+              "canExtend": true,
+              "version": 95,
+              "minHeight": 1292,
+              "dynamicTriggerPathList": [],
+              "parentColumnSpace": 1,
+              "dynamicBindingPathList": [],
+              "leftColumn": 0,
+              "children": [
+                {
+                  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+                  "borderColor": "#E0DEDE",
+                  "isVisibleDownload": true,
+                  "topRow": 1,
+                  "isSortable": true,
+                  "type": "TABLE_WIDGET_V2",
+                  "inlineEditingSaveOption": "ROW_LEVEL",
+                  "animateLoading": true,
+                  "dynamicBindingPathList": [
+                    {
+                      "key": "accentColor"
+                    },
+                    {
+                      "key": "borderRadius"
+                    },
+                    {
+                      "key": "boxShadow"
+                    },
+                    {
+                      "key": "tableData"
+                    },
+                    {
+                      "key": "primaryColumns.id.computedValue"
+                    },
+                    {
+                      "key": "primaryColumns.start.computedValue"
+                    },
+                    {
+                      "key": "primaryColumns.end.computedValue"
+                    },
+                    {
+                      "key": "primaryColumns.title.computedValue"
+                    }
+                  ],
+                  "leftColumn": 2,
+                  "delimiter": ",",
+                  "customIsLoadingValue": "",
+                  "defaultSelectedRowIndex": 0,
+                  "flexVerticalAlignment": "start",
+                  "cachedTableData": {},
+                  "dynamicHeight": "FIXED",
+                  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "isVisibleFilters": false,
+                  "isVisible": true,
+                  "enableClientSideSearch": true,
+                  "version": 2,
+                  "totalRecordsCount": 0,
+                  "isLoading": false,
+                  "childStylesheet": {
+                    "button": {
+                      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "boxShadow": "none"
+                    },
+                    "menuButton": {
+                      "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "boxShadow": "none"
+                    },
+                    "iconButton": {
+                      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "boxShadow": "none"
+                    },
+                    "editActions": {
+                      "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                    }
+                  },
+                  "customIsLoading": false,
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "columnUpdatedAt": 1795532375697,
+                  "defaultSelectedRowIndices": [
+                    0
+                  ],
+                  "needsErrorInfo": false,
+                  "mobileBottomRow": 29,
+                  "widgetName": "tblBookings",
+                  "defaultPageSize": 0,
+                  "columnOrder": [
+                    "id",
+                    "start",
+                    "end",
+                    "title"
+                  ],
+                  "dynamicPropertyPathList": [
+                    {
+                      "key": "tableData"
+                    }
+                  ],
+                  "bottomRow": 29,
+                  "columnWidthMap": {},
+                  "parentRowSpace": 10,
+                  "mobileRightColumn": 36,
+                  "parentColumnSpace": 22.234375,
+                  "dynamicTriggerPathList": [],
+                  "borderWidth": "1",
+                  "primaryColumns": {
+                    "id": {
+                      "allowCellWrapping": false,
+                      "allowHeaderWrapping": false,
+                      "allowSameOptionsInNewRow": true,
+                      "index": 0,
+                      "width": 150,
+                      "originalId": "id",
+                      "id": "id",
+                      "alias": "id",
+                      "horizontalAlignment": "LEFT",
+                      "verticalAlignment": "CENTER",
+                      "columnType": "text",
+                      "textSize": "0.875rem",
+                      "enableFilter": true,
+                      "enableSort": true,
+                      "isVisible": true,
+                      "isDisabled": false,
+                      "isCellEditable": false,
+                      "isEditable": false,
+                      "isCellVisible": true,
+                      "isDerived": false,
+                      "label": "id",
+                      "isSaveVisible": true,
+                      "isDiscardVisible": true,
+                      "computedValue": "{{(() => { const tableData = tblBookings.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"id\"])) : id })()}}",
+                      "sticky": "",
+                      "validation": {},
+                      "currencyCode": "USD",
+                      "decimals": 0,
+                      "thousandSeparator": true,
+                      "notation": "standard"
+                    },
+                    "start": {
+                      "allowCellWrapping": false,
+                      "allowHeaderWrapping": false,
+                      "allowSameOptionsInNewRow": true,
+                      "index": 1,
+                      "width": 150,
+                      "originalId": "start",
+                      "id": "start",
+                      "alias": "start",
+                      "horizontalAlignment": "LEFT",
+                      "verticalAlignment": "CENTER",
+                      "columnType": "text",
+                      "textSize": "0.875rem",
+                      "enableFilter": true,
+                      "enableSort": true,
+                      "isVisible": true,
+                      "isDisabled": false,
+                      "isCellEditable": false,
+                      "isEditable": false,
+                      "isCellVisible": true,
+                      "isDerived": false,
+                      "label": "start",
+                      "isSaveVisible": true,
+                      "isDiscardVisible": true,
+                      "computedValue": "{{(() => { const tableData = tblBookings.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"start\"])) : start })()}}",
+                      "sticky": "",
+                      "validation": {},
+                      "currencyCode": "USD",
+                      "decimals": 0,
+                      "thousandSeparator": true,
+                      "notation": "standard"
+                    },
+                    "end": {
+                      "allowCellWrapping": false,
+                      "allowHeaderWrapping": false,
+                      "allowSameOptionsInNewRow": true,
+                      "index": 2,
+                      "width": 150,
+                      "originalId": "end",
+                      "id": "end",
+                      "alias": "end",
+                      "horizontalAlignment": "LEFT",
+                      "verticalAlignment": "CENTER",
+                      "columnType": "text",
+                      "textSize": "0.875rem",
+                      "enableFilter": true,
+                      "enableSort": true,
+                      "isVisible": true,
+                      "isDisabled": false,
+                      "isCellEditable": false,
+                      "isEditable": false,
+                      "isCellVisible": true,
+                      "isDerived": false,
+                      "label": "end",
+                      "isSaveVisible": true,
+                      "isDiscardVisible": true,
+                      "computedValue": "{{(() => { const tableData = tblBookings.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"end\"])) : end })()}}",
+                      "sticky": "",
+                      "validation": {},
+                      "currencyCode": "USD",
+                      "decimals": 0,
+                      "thousandSeparator": true,
+                      "notation": "standard"
+                    },
+                    "title": {
+                      "allowCellWrapping": false,
+                      "allowHeaderWrapping": false,
+                      "allowSameOptionsInNewRow": true,
+                      "index": 3,
+                      "width": 150,
+                      "originalId": "title",
+                      "id": "title",
+                      "alias": "title",
+                      "horizontalAlignment": "LEFT",
+                      "verticalAlignment": "CENTER",
+                      "columnType": "text",
+                      "textSize": "0.875rem",
+                      "enableFilter": true,
+                      "enableSort": true,
+                      "isVisible": true,
+                      "isDisabled": false,
+                      "isCellEditable": false,
+                      "isEditable": false,
+                      "isCellVisible": true,
+                      "isDerived": false,
+                      "label": "title",
+                      "isSaveVisible": true,
+                      "isDiscardVisible": true,
+                      "computedValue": "{{(() => { const tableData = tblBookings.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"title\"])) : title })()}}",
+                      "sticky": "",
+                      "validation": {},
+                      "currencyCode": "USD",
+                      "decimals": 0,
+                      "thousandSeparator": true,
+                      "notation": "standard"
+                    }
+                  },
+                  "key": "7ukfcte5mq",
+                  "canFreezeColumn": true,
+                  "endOfData": false,
+                  "rightColumn": 36,
+                  "textSize": "0.875rem",
+                  "widgetId": "l8yrlzs1ag",
+                  "minWidth": 450,
+                  "tableData": "{{Rules.bookings}}",
+                  "label": "Data",
+                  "searchKey": "",
+                  "parentId": "0",
+                  "renderMode": "CANVAS",
+                  "mobileTopRow": 1,
+                  "horizontalAlignment": "LEFT",
+                  "isVisibleSearch": true,
+                  "autoHeightRowCount": 10,
+                  "responsiveBehavior": "fill",
+                  "mobileLeftColumn": 2,
+                  "isVisiblePagination": true,
+                  "maxDynamicHeight": 9000,
+                  "minDynamicHeight": 4,
+                  "verticalAlignment": "CENTER"
+                },
+                {
+                  "needsErrorInfo": false,
+                  "boxShadow": "none",
+                  "mobileBottomRow": 38,
+                  "widgetName": "inpNow",
+                  "topRow": 31,
+                  "bottomRow": 38,
+                  "parentRowSpace": 10,
+                  "labelWidth": 5,
+                  "autoFocus": false,
+                  "type": "INPUT_WIDGET_V2",
+                  "mobileRightColumn": 6,
+                  "animateLoading": true,
+                  "parentColumnSpace": 22.234375,
+                  "dynamicTriggerPathList": [],
+                  "resetOnSubmit": true,
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [
+                    {
+                      "key": "accentColor"
+                    },
+                    {
+                      "key": "borderRadius"
+                    }
+                  ],
+                  "labelPosition": "Top",
+                  "labelStyle": "",
+                  "inputType": "TEXT",
+                  "maxChars": "5",
+                  "placeholderText": "HH:MM",
+                  "isDisabled": false,
+                  "key": "d8v51k1x3n",
+                  "labelTextSize": "0.875rem",
+                  "isRequired": false,
+                  "rightColumn": 24,
+                  "dynamicHeight": "FIXED",
+                  "widgetId": "2mv6zygwge",
+                  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "showStepArrows": false,
+                  "minWidth": 450,
+                  "isVisible": true,
+                  "label": "Current time (reference clock)",
+                  "version": 2,
+                  "parentId": "0",
+                  "labelAlignment": "left",
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "mobileTopRow": 31,
+                  "responsiveBehavior": "fill",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "mobileLeftColumn": 0,
+                  "maxDynamicHeight": 9000,
+                  "iconAlign": "left",
+                  "defaultText": "08:30",
+                  "minDynamicHeight": 4
+                },
+                {
+                  "needsErrorInfo": false,
+                  "boxShadow": "none",
+                  "mobileBottomRow": 46,
+                  "widgetName": "inpStart",
+                  "topRow": 39,
+                  "bottomRow": 46,
+                  "parentRowSpace": 10,
+                  "labelWidth": 5,
+                  "autoFocus": false,
+                  "type": "INPUT_WIDGET_V2",
+                  "mobileRightColumn": 6,
+                  "animateLoading": true,
+                  "parentColumnSpace": 22.234375,
+                  "dynamicTriggerPathList": [],
+                  "resetOnSubmit": true,
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [
+                    {
+                      "key": "accentColor"
+                    },
+                    {
+                      "key": "borderRadius"
+                    }
+                  ],
+                  "labelPosition": "Top",
+                  "labelStyle": "",
+                  "inputType": "TEXT",
+                  "maxChars": "5",
+                  "placeholderText": "10:30",
+                  "isDisabled": false,
+                  "key": "d8v51k1x3n",
+                  "labelTextSize": "0.875rem",
+                  "isRequired": false,
+                  "rightColumn": 24,
+                  "dynamicHeight": "FIXED",
+                  "widgetId": "5vzj1zcrb9",
+                  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "showStepArrows": false,
+                  "minWidth": 450,
+                  "isVisible": true,
+                  "label": "Start time (HH:MM)",
+                  "version": 2,
+                  "parentId": "0",
+                  "labelAlignment": "left",
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "mobileTopRow": 39,
+                  "responsiveBehavior": "fill",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "mobileLeftColumn": 0,
+                  "maxDynamicHeight": 9000,
+                  "iconAlign": "left",
+                  "defaultText": "",
+                  "minDynamicHeight": 4
+                },
+                {
+                  "needsErrorInfo": false,
+                  "boxShadow": "none",
+                  "mobileBottomRow": 54,
+                  "widgetName": "inpDuration",
+                  "topRow": 47,
+                  "bottomRow": 54,
+                  "parentRowSpace": 10,
+                  "labelWidth": 5,
+                  "autoFocus": false,
+                  "type": "INPUT_WIDGET_V2",
+                  "mobileRightColumn": 6,
+                  "animateLoading": true,
+                  "parentColumnSpace": 22.234375,
+                  "dynamicTriggerPathList": [],
+                  "resetOnSubmit": true,
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [
+                    {
+                      "key": "accentColor"
+                    },
+                    {
+                      "key": "borderRadius"
+                    }
+                  ],
+                  "labelPosition": "Top",
+                  "labelStyle": "",
+                  "inputType": "TEXT",
+                  "maxChars": "4",
+                  "placeholderText": "60",
+                  "isDisabled": false,
+                  "key": "d8v51k1x3n",
+                  "labelTextSize": "0.875rem",
+                  "isRequired": false,
+                  "rightColumn": 24,
+                  "dynamicHeight": "FIXED",
+                  "widgetId": "pb0xn429nv",
+                  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "showStepArrows": false,
+                  "minWidth": 450,
+                  "isVisible": true,
+                  "label": "Duration (minutes)",
+                  "version": 2,
+                  "parentId": "0",
+                  "labelAlignment": "left",
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "mobileTopRow": 47,
+                  "responsiveBehavior": "fill",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "mobileLeftColumn": 0,
+                  "maxDynamicHeight": 9000,
+                  "iconAlign": "left",
+                  "defaultText": "",
+                  "minDynamicHeight": 4
+                },
+                {
+                  "needsErrorInfo": false,
+                  "boxShadow": "none",
+                  "mobileBottomRow": 59,
+                  "widgetName": "swBlocked",
+                  "topRow": 55,
+                  "bottomRow": 59,
+                  "parentRowSpace": 10,
+                  "type": "SWITCH_WIDGET",
+                  "alignWidget": "LEFT",
+                  "mobileRightColumn": 6,
+                  "animateLoading": true,
+                  "parentColumnSpace": 22.234375,
+                  "dynamicTriggerPathList": [],
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [
+                    {
+                      "key": "accentColor"
+                    }
+                  ],
+                  "labelPosition": "Left",
+                  "isDisabled": false,
+                  "key": "4oz4u0mqzi",
+                  "rightColumn": 24,
+                  "dynamicHeight": "AUTO_HEIGHT",
+                  "widgetId": "crcy5fxzi4",
+                  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "isVisible": true,
+                  "label": "Room blocked",
+                  "defaultSwitchState": false,
+                  "version": 1,
+                  "parentId": "0",
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "mobileTopRow": 55,
+                  "responsiveBehavior": "fill",
+                  "originalTopRow": 55,
+                  "mobileLeftColumn": 0,
+                  "maxDynamicHeight": 9000,
+                  "originalBottomRow": 60,
+                  "minDynamicHeight": 4
+                },
+                {
+                  "resetFormOnClick": false,
+                  "needsErrorInfo": false,
+                  "boxShadow": "none",
+                  "mobileBottomRow": 67,
+                  "widgetName": "btnCheck",
+                  "onClick": "{{Rules.run()}}",
+                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "dynamicPropertyPathList": [
+                    {
+                      "key": "onClick"
+                    }
+                  ],
+                  "topRow": 62,
+                  "bottomRow": 66,
+                  "parentRowSpace": 10,
+                  "type": "BUTTON_WIDGET",
+                  "mobileRightColumn": 6,
+                  "animateLoading": true,
+                  "parentColumnSpace": 22.234375,
+                  "dynamicTriggerPathList": [
+                    {
+                      "key": "onClick"
+                    }
+                  ],
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [
+                    {
+                      "key": "buttonColor"
+                    },
+                    {
+                      "key": "borderRadius"
+                    }
+                  ],
+                  "text": "Check availability",
+                  "isDisabled": false,
+                  "key": "6sz52moz91",
+                  "rightColumn": 12,
+                  "isDefaultClickDisabled": true,
+                  "widgetId": "z5q9ryga4c",
+                  "minWidth": 120,
+                  "isVisible": true,
+                  "recaptchaType": "V3",
+                  "version": 1,
+                  "parentId": "0",
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "mobileTopRow": 63,
+                  "responsiveBehavior": "hug",
+                  "originalTopRow": 63,
+                  "disabledWhenInvalid": false,
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "mobileLeftColumn": 0,
+                  "originalBottomRow": 67,
+                  "buttonVariant": "PRIMARY",
+                  "placement": "CENTER"
+                },
+                {
+                  "needsErrorInfo": false,
+                  "mobileBottomRow": 74,
+                  "widgetName": "txtResult",
+                  "topRow": 69,
+                  "bottomRow": 73,
+                  "parentRowSpace": 10,
+                  "type": "TEXT_WIDGET",
+                  "mobileRightColumn": 6,
+                  "animateLoading": true,
+                  "overflow": "NONE",
+                  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                  "parentColumnSpace": 22.234375,
+                  "dynamicTriggerPathList": [],
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [
+                    {
+                      "key": "truncateButtonColor"
+                    },
+                    {
+                      "key": "fontFamily"
+                    },
+                    {
+                      "key": "borderRadius"
+                    },
+                    {
+                      "key": "text"
+                    }
+                  ],
+                  "shouldTruncate": false,
+                  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "text": "{{appsmith.store.result ? (appsmith.store.result.available ? \"AVAILABLE - \" : (appsmith.store.result.message.startsWith(\"Validation\") ? \"INVALID INPUT - \" : \"UNAVAILABLE - \")) + appsmith.store.result.message + \" [available=\" + appsmith.store.result.available + \", reasonCode=\" + appsmith.store.result.reasonCode + \"]\" : \"Enter a start time and a duration, then press Check availability.\"}}",
+                  "key": "ag15snkd28",
+                  "rightColumn": 36,
+                  "textAlign": "LEFT",
+                  "dynamicHeight": "AUTO_HEIGHT",
+                  "widgetId": "7krddvqg0z",
+                  "minWidth": 450,
+                  "isVisible": true,
+                  "fontStyle": "BOLD",
+                  "textColor": "#231F20",
+                  "version": 1,
+                  "parentId": "0",
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "mobileTopRow": 70,
+                  "responsiveBehavior": "fill",
+                  "originalTopRow": 70,
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "mobileLeftColumn": 0,
+                  "maxDynamicHeight": 9000,
+                  "originalBottomRow": 74,
+                  "fontSize": "1rem",
+                  "minDynamicHeight": 4
+                }
+              ]
+            },
+            "layoutOnLoadActions": [],
+            "layoutOnLoadActionErrors": [],
+            "validOnPageLoadActions": true,
+            "id": "Page1",
+            "deleted": false,
+            "policies": [],
+            "userPermissions": []
+          }
+        ],
+        "userPermissions": [],
+        "policyMap": {}
+      },
+      "publishedPage": {
+        "name": "Page1",
+        "slug": "page1",
+        "layouts": [
+          {
+            "viewMode": false,
+            "dsl": {
+              "widgetName": "MainContainer",
+              "backgroundColor": "none",
+              "rightColumn": 4896,
+              "snapColumns": 64,
+              "detachFromLayout": true,
+              "widgetId": "0",
+              "topRow": 0,
+              "bottomRow": 730,
+              "containerStyle": "none",
+              "snapRows": 124,
+              "parentRowSpace": 1,
+              "type": "CANVAS_WIDGET",
+              "canExtend": true,
+              "version": 95,
+              "minHeight": 1292,
+              "dynamicTriggerPathList": [],
+              "parentColumnSpace": 1,
+              "dynamicBindingPathList": [],
+              "leftColumn": 0,
+              "children": [
+                {
+                  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+                  "borderColor": "#E0DEDE",
+                  "isVisibleDownload": true,
+                  "topRow": 1,
+                  "isSortable": true,
+                  "type": "TABLE_WIDGET_V2",
+                  "inlineEditingSaveOption": "ROW_LEVEL",
+                  "animateLoading": true,
+                  "dynamicBindingPathList": [
+                    {
+                      "key": "accentColor"
+                    },
+                    {
+                      "key": "borderRadius"
+                    },
+                    {
+                      "key": "boxShadow"
+                    },
+                    {
+                      "key": "tableData"
+                    },
+                    {
+                      "key": "primaryColumns.id.computedValue"
+                    },
+                    {
+                      "key": "primaryColumns.start.computedValue"
+                    },
+                    {
+                      "key": "primaryColumns.end.computedValue"
+                    },
+                    {
+                      "key": "primaryColumns.title.computedValue"
+                    }
+                  ],
+                  "leftColumn": 2,
+                  "delimiter": ",",
+                  "customIsLoadingValue": "",
+                  "defaultSelectedRowIndex": 0,
+                  "flexVerticalAlignment": "start",
+                  "cachedTableData": {},
+                  "dynamicHeight": "FIXED",
+                  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "isVisibleFilters": false,
+                  "isVisible": true,
+                  "enableClientSideSearch": true,
+                  "version": 2,
+                  "totalRecordsCount": 0,
+                  "isLoading": false,
+                  "childStylesheet": {
+                    "button": {
+                      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "boxShadow": "none"
+                    },
+                    "menuButton": {
+                      "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "boxShadow": "none"
+                    },
+                    "iconButton": {
+                      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "boxShadow": "none"
+                    },
+                    "editActions": {
+                      "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                    }
+                  },
+                  "customIsLoading": false,
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "columnUpdatedAt": 1795532375697,
+                  "defaultSelectedRowIndices": [
+                    0
+                  ],
+                  "needsErrorInfo": false,
+                  "mobileBottomRow": 29,
+                  "widgetName": "tblBookings",
+                  "defaultPageSize": 0,
+                  "columnOrder": [
+                    "id",
+                    "start",
+                    "end",
+                    "title"
+                  ],
+                  "dynamicPropertyPathList": [
+                    {
+                      "key": "tableData"
+                    }
+                  ],
+                  "bottomRow": 29,
+                  "columnWidthMap": {},
+                  "parentRowSpace": 10,
+                  "mobileRightColumn": 36,
+                  "parentColumnSpace": 22.234375,
+                  "dynamicTriggerPathList": [],
+                  "borderWidth": "1",
+                  "primaryColumns": {
+                    "id": {
+                      "allowCellWrapping": false,
+                      "allowHeaderWrapping": false,
+                      "allowSameOptionsInNewRow": true,
+                      "index": 0,
+                      "width": 150,
+                      "originalId": "id",
+                      "id": "id",
+                      "alias": "id",
+                      "horizontalAlignment": "LEFT",
+                      "verticalAlignment": "CENTER",
+                      "columnType": "text",
+                      "textSize": "0.875rem",
+                      "enableFilter": true,
+                      "enableSort": true,
+                      "isVisible": true,
+                      "isDisabled": false,
+                      "isCellEditable": false,
+                      "isEditable": false,
+                      "isCellVisible": true,
+                      "isDerived": false,
+                      "label": "id",
+                      "isSaveVisible": true,
+                      "isDiscardVisible": true,
+                      "computedValue": "{{(() => { const tableData = tblBookings.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"id\"])) : id })()}}",
+                      "sticky": "",
+                      "validation": {},
+                      "currencyCode": "USD",
+                      "decimals": 0,
+                      "thousandSeparator": true,
+                      "notation": "standard"
+                    },
+                    "start": {
+                      "allowCellWrapping": false,
+                      "allowHeaderWrapping": false,
+                      "allowSameOptionsInNewRow": true,
+                      "index": 1,
+                      "width": 150,
+                      "originalId": "start",
+                      "id": "start",
+                      "alias": "start",
+                      "horizontalAlignment": "LEFT",
+                      "verticalAlignment": "CENTER",
+                      "columnType": "text",
+                      "textSize": "0.875rem",
+                      "enableFilter": true,
+                      "enableSort": true,
+                      "isVisible": true,
+                      "isDisabled": false,
+                      "isCellEditable": false,
+                      "isEditable": false,
+                      "isCellVisible": true,
+                      "isDerived": false,
+                      "label": "start",
+                      "isSaveVisible": true,
+                      "isDiscardVisible": true,
+                      "computedValue": "{{(() => { const tableData = tblBookings.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"start\"])) : start })()}}",
+                      "sticky": "",
+                      "validation": {},
+                      "currencyCode": "USD",
+                      "decimals": 0,
+                      "thousandSeparator": true,
+                      "notation": "standard"
+                    },
+                    "end": {
+                      "allowCellWrapping": false,
+                      "allowHeaderWrapping": false,
+                      "allowSameOptionsInNewRow": true,
+                      "index": 2,
+                      "width": 150,
+                      "originalId": "end",
+                      "id": "end",
+                      "alias": "end",
+                      "horizontalAlignment": "LEFT",
+                      "verticalAlignment": "CENTER",
+                      "columnType": "text",
+                      "textSize": "0.875rem",
+                      "enableFilter": true,
+                      "enableSort": true,
+                      "isVisible": true,
+                      "isDisabled": false,
+                      "isCellEditable": false,
+                      "isEditable": false,
+                      "isCellVisible": true,
+                      "isDerived": false,
+                      "label": "end",
+                      "isSaveVisible": true,
+                      "isDiscardVisible": true,
+                      "computedValue": "{{(() => { const tableData = tblBookings.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"end\"])) : end })()}}",
+                      "sticky": "",
+                      "validation": {},
+                      "currencyCode": "USD",
+                      "decimals": 0,
+                      "thousandSeparator": true,
+                      "notation": "standard"
+                    },
+                    "title": {
+                      "allowCellWrapping": false,
+                      "allowHeaderWrapping": false,
+                      "allowSameOptionsInNewRow": true,
+                      "index": 3,
+                      "width": 150,
+                      "originalId": "title",
+                      "id": "title",
+                      "alias": "title",
+                      "horizontalAlignment": "LEFT",
+                      "verticalAlignment": "CENTER",
+                      "columnType": "text",
+                      "textSize": "0.875rem",
+                      "enableFilter": true,
+                      "enableSort": true,
+                      "isVisible": true,
+                      "isDisabled": false,
+                      "isCellEditable": false,
+                      "isEditable": false,
+                      "isCellVisible": true,
+                      "isDerived": false,
+                      "label": "title",
+                      "isSaveVisible": true,
+                      "isDiscardVisible": true,
+                      "computedValue": "{{(() => { const tableData = tblBookings.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"title\"])) : title })()}}",
+                      "sticky": "",
+                      "validation": {},
+                      "currencyCode": "USD",
+                      "decimals": 0,
+                      "thousandSeparator": true,
+                      "notation": "standard"
+                    }
+                  },
+                  "key": "7ukfcte5mq",
+                  "canFreezeColumn": true,
+                  "endOfData": false,
+                  "rightColumn": 36,
+                  "textSize": "0.875rem",
+                  "widgetId": "l8yrlzs1ag",
+                  "minWidth": 450,
+                  "tableData": "{{Rules.bookings}}",
+                  "label": "Data",
+                  "searchKey": "",
+                  "parentId": "0",
+                  "renderMode": "CANVAS",
+                  "mobileTopRow": 1,
+                  "horizontalAlignment": "LEFT",
+                  "isVisibleSearch": true,
+                  "autoHeightRowCount": 10,
+                  "responsiveBehavior": "fill",
+                  "mobileLeftColumn": 2,
+                  "isVisiblePagination": true,
+                  "maxDynamicHeight": 9000,
+                  "minDynamicHeight": 4,
+                  "verticalAlignment": "CENTER"
+                },
+                {
+                  "needsErrorInfo": false,
+                  "boxShadow": "none",
+                  "mobileBottomRow": 38,
+                  "widgetName": "inpNow",
+                  "topRow": 31,
+                  "bottomRow": 38,
+                  "parentRowSpace": 10,
+                  "labelWidth": 5,
+                  "autoFocus": false,
+                  "type": "INPUT_WIDGET_V2",
+                  "mobileRightColumn": 6,
+                  "animateLoading": true,
+                  "parentColumnSpace": 22.234375,
+                  "dynamicTriggerPathList": [],
+                  "resetOnSubmit": true,
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [
+                    {
+                      "key": "accentColor"
+                    },
+                    {
+                      "key": "borderRadius"
+                    }
+                  ],
+                  "labelPosition": "Top",
+                  "labelStyle": "",
+                  "inputType": "TEXT",
+                  "maxChars": "5",
+                  "placeholderText": "HH:MM",
+                  "isDisabled": false,
+                  "key": "d8v51k1x3n",
+                  "labelTextSize": "0.875rem",
+                  "isRequired": false,
+                  "rightColumn": 24,
+                  "dynamicHeight": "FIXED",
+                  "widgetId": "2mv6zygwge",
+                  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "showStepArrows": false,
+                  "minWidth": 450,
+                  "isVisible": true,
+                  "label": "Current time (reference clock)",
+                  "version": 2,
+                  "parentId": "0",
+                  "labelAlignment": "left",
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "mobileTopRow": 31,
+                  "responsiveBehavior": "fill",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "mobileLeftColumn": 0,
+                  "maxDynamicHeight": 9000,
+                  "iconAlign": "left",
+                  "defaultText": "08:30",
+                  "minDynamicHeight": 4
+                },
+                {
+                  "needsErrorInfo": false,
+                  "boxShadow": "none",
+                  "mobileBottomRow": 46,
+                  "widgetName": "inpStart",
+                  "topRow": 39,
+                  "bottomRow": 46,
+                  "parentRowSpace": 10,
+                  "labelWidth": 5,
+                  "autoFocus": false,
+                  "type": "INPUT_WIDGET_V2",
+                  "mobileRightColumn": 6,
+                  "animateLoading": true,
+                  "parentColumnSpace": 22.234375,
+                  "dynamicTriggerPathList": [],
+                  "resetOnSubmit": true,
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [
+                    {
+                      "key": "accentColor"
+                    },
+                    {
+                      "key": "borderRadius"
+                    }
+                  ],
+                  "labelPosition": "Top",
+                  "labelStyle": "",
+                  "inputType": "TEXT",
+                  "maxChars": "5",
+                  "placeholderText": "10:30",
+                  "isDisabled": false,
+                  "key": "d8v51k1x3n",
+                  "labelTextSize": "0.875rem",
+                  "isRequired": false,
+                  "rightColumn": 24,
+                  "dynamicHeight": "FIXED",
+                  "widgetId": "5vzj1zcrb9",
+                  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "showStepArrows": false,
+                  "minWidth": 450,
+                  "isVisible": true,
+                  "label": "Start time (HH:MM)",
+                  "version": 2,
+                  "parentId": "0",
+                  "labelAlignment": "left",
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "mobileTopRow": 39,
+                  "responsiveBehavior": "fill",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "mobileLeftColumn": 0,
+                  "maxDynamicHeight": 9000,
+                  "iconAlign": "left",
+                  "defaultText": "",
+                  "minDynamicHeight": 4
+                },
+                {
+                  "needsErrorInfo": false,
+                  "boxShadow": "none",
+                  "mobileBottomRow": 54,
+                  "widgetName": "inpDuration",
+                  "topRow": 47,
+                  "bottomRow": 54,
+                  "parentRowSpace": 10,
+                  "labelWidth": 5,
+                  "autoFocus": false,
+                  "type": "INPUT_WIDGET_V2",
+                  "mobileRightColumn": 6,
+                  "animateLoading": true,
+                  "parentColumnSpace": 22.234375,
+                  "dynamicTriggerPathList": [],
+                  "resetOnSubmit": true,
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [
+                    {
+                      "key": "accentColor"
+                    },
+                    {
+                      "key": "borderRadius"
+                    }
+                  ],
+                  "labelPosition": "Top",
+                  "labelStyle": "",
+                  "inputType": "TEXT",
+                  "maxChars": "4",
+                  "placeholderText": "60",
+                  "isDisabled": false,
+                  "key": "d8v51k1x3n",
+                  "labelTextSize": "0.875rem",
+                  "isRequired": false,
+                  "rightColumn": 24,
+                  "dynamicHeight": "FIXED",
+                  "widgetId": "pb0xn429nv",
+                  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "showStepArrows": false,
+                  "minWidth": 450,
+                  "isVisible": true,
+                  "label": "Duration (minutes)",
+                  "version": 2,
+                  "parentId": "0",
+                  "labelAlignment": "left",
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "mobileTopRow": 47,
+                  "responsiveBehavior": "fill",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "mobileLeftColumn": 0,
+                  "maxDynamicHeight": 9000,
+                  "iconAlign": "left",
+                  "defaultText": "",
+                  "minDynamicHeight": 4
+                },
+                {
+                  "needsErrorInfo": false,
+                  "boxShadow": "none",
+                  "mobileBottomRow": 59,
+                  "widgetName": "swBlocked",
+                  "topRow": 55,
+                  "bottomRow": 59,
+                  "parentRowSpace": 10,
+                  "type": "SWITCH_WIDGET",
+                  "alignWidget": "LEFT",
+                  "mobileRightColumn": 6,
+                  "animateLoading": true,
+                  "parentColumnSpace": 22.234375,
+                  "dynamicTriggerPathList": [],
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [
+                    {
+                      "key": "accentColor"
+                    }
+                  ],
+                  "labelPosition": "Left",
+                  "isDisabled": false,
+                  "key": "4oz4u0mqzi",
+                  "rightColumn": 24,
+                  "dynamicHeight": "AUTO_HEIGHT",
+                  "widgetId": "crcy5fxzi4",
+                  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "isVisible": true,
+                  "label": "Room blocked",
+                  "defaultSwitchState": false,
+                  "version": 1,
+                  "parentId": "0",
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "mobileTopRow": 55,
+                  "responsiveBehavior": "fill",
+                  "originalTopRow": 55,
+                  "mobileLeftColumn": 0,
+                  "maxDynamicHeight": 9000,
+                  "originalBottomRow": 60,
+                  "minDynamicHeight": 4
+                },
+                {
+                  "resetFormOnClick": false,
+                  "needsErrorInfo": false,
+                  "boxShadow": "none",
+                  "mobileBottomRow": 67,
+                  "widgetName": "btnCheck",
+                  "onClick": "{{Rules.run()}}",
+                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "dynamicPropertyPathList": [
+                    {
+                      "key": "onClick"
+                    }
+                  ],
+                  "topRow": 62,
+                  "bottomRow": 66,
+                  "parentRowSpace": 10,
+                  "type": "BUTTON_WIDGET",
+                  "mobileRightColumn": 6,
+                  "animateLoading": true,
+                  "parentColumnSpace": 22.234375,
+                  "dynamicTriggerPathList": [
+                    {
+                      "key": "onClick"
+                    }
+                  ],
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [
+                    {
+                      "key": "buttonColor"
+                    },
+                    {
+                      "key": "borderRadius"
+                    }
+                  ],
+                  "text": "Check availability",
+                  "isDisabled": false,
+                  "key": "6sz52moz91",
+                  "rightColumn": 12,
+                  "isDefaultClickDisabled": true,
+                  "widgetId": "z5q9ryga4c",
+                  "minWidth": 120,
+                  "isVisible": true,
+                  "recaptchaType": "V3",
+                  "version": 1,
+                  "parentId": "0",
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "mobileTopRow": 63,
+                  "responsiveBehavior": "hug",
+                  "originalTopRow": 63,
+                  "disabledWhenInvalid": false,
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "mobileLeftColumn": 0,
+                  "originalBottomRow": 67,
+                  "buttonVariant": "PRIMARY",
+                  "placement": "CENTER"
+                },
+                {
+                  "needsErrorInfo": false,
+                  "mobileBottomRow": 74,
+                  "widgetName": "txtResult",
+                  "topRow": 69,
+                  "bottomRow": 73,
+                  "parentRowSpace": 10,
+                  "type": "TEXT_WIDGET",
+                  "mobileRightColumn": 6,
+                  "animateLoading": true,
+                  "overflow": "NONE",
+                  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                  "parentColumnSpace": 22.234375,
+                  "dynamicTriggerPathList": [],
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [
+                    {
+                      "key": "truncateButtonColor"
+                    },
+                    {
+                      "key": "fontFamily"
+                    },
+                    {
+                      "key": "borderRadius"
+                    },
+                    {
+                      "key": "text"
+                    }
+                  ],
+                  "shouldTruncate": false,
+                  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "text": "{{appsmith.store.result ? (appsmith.store.result.available ? \"AVAILABLE - \" : (appsmith.store.result.message.startsWith(\"Validation\") ? \"INVALID INPUT - \" : \"UNAVAILABLE - \")) + appsmith.store.result.message + \" [available=\" + appsmith.store.result.available + \", reasonCode=\" + appsmith.store.result.reasonCode + \"]\" : \"Enter a start time and a duration, then press Check availability.\"}}",
+                  "key": "ag15snkd28",
+                  "rightColumn": 36,
+                  "textAlign": "LEFT",
+                  "dynamicHeight": "AUTO_HEIGHT",
+                  "widgetId": "7krddvqg0z",
+                  "minWidth": 450,
+                  "isVisible": true,
+                  "fontStyle": "BOLD",
+                  "textColor": "#231F20",
+                  "version": 1,
+                  "parentId": "0",
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "mobileTopRow": 70,
+                  "responsiveBehavior": "fill",
+                  "originalTopRow": 70,
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "mobileLeftColumn": 0,
+                  "maxDynamicHeight": 9000,
+                  "originalBottomRow": 74,
+                  "fontSize": "1rem",
+                  "minDynamicHeight": 4
+                }
+              ]
+            },
+            "layoutOnLoadActions": [],
+            "layoutOnLoadActionErrors": [],
+            "validOnPageLoadActions": true,
+            "id": "Page1",
+            "deleted": false,
+            "policies": [],
+            "userPermissions": []
+          }
+        ],
+        "userPermissions": [],
+        "policyMap": {}
+      },
+      "gitSyncId": "6b05a3dd177cd4bd6b01e9b8_a2610f16-39d1-44eb-88e5-583d8f2bf725",
+      "deleted": false
+    }
+  ],
+  "actionList": [
+    {
+      "pluginType": "JS",
+      "pluginId": "js-plugin",
+      "unpublishedAction": {
+        "name": "toMin",
+        "fullyQualifiedName": "Rules.toMin",
+        "datasource": {
+          "name": "UNUSED_DATASOURCE",
+          "pluginId": "js-plugin",
+          "messages": [],
+          "isAutoGenerated": false,
+          "deleted": false,
+          "policyMap": {},
+          "policies": [],
+          "userPermissions": []
+        },
+        "pageId": "Page1",
+        "collectionId": "Page1_Rules",
+        "actionConfiguration": {
+          "timeoutInMillisecond": 10000,
+          "paginationType": "NONE",
+          "encodeParamsToggle": true,
+          "body": "function (t) {\n  const m = (/^([01]\\d|2[0-3]):([0-5]\\d)$/).exec(String(t || \"\").trim());\n  return m ? Number(m[1]) * 60 + Number(m[2]) : null;\n}",
+          "selfReferencingDataPaths": [],
+          "jsArguments": [
+            {
+              "name": "t"
+            }
+          ]
+        },
+        "runBehaviour": "MANUAL",
+        "dynamicBindingPathList": [
+          {
+            "key": "body"
+          }
+        ],
+        "isValid": true,
+        "invalids": [],
+        "messages": [],
+        "jsonPathKeys": [
+          "function (t) {\n  const m = (/^([01]\\d|2[0-3]):([0-5]\\d)$/).exec(String(t || \"\").trim());\n  return m ? Number(m[1]) * 60 + Number(m[2]) : null;\n}"
+        ],
+        "userSetOnLoad": false,
+        "confirmBeforeExecute": false,
+        "policyMap": {},
+        "userPermissions": [],
+        "createdAt": "2026-11-24T14:53:02Z"
+      },
+      "publishedAction": {
+        "name": "toMin",
+        "fullyQualifiedName": "Rules.toMin",
+        "datasource": {
+          "name": "UNUSED_DATASOURCE",
+          "pluginId": "js-plugin",
+          "messages": [],
+          "isAutoGenerated": false,
+          "deleted": false,
+          "policyMap": {},
+          "policies": [],
+          "userPermissions": []
+        },
+        "pageId": "Page1",
+        "collectionId": "Page1_Rules",
+        "actionConfiguration": {
+          "timeoutInMillisecond": 10000,
+          "paginationType": "NONE",
+          "encodeParamsToggle": true,
+          "body": "function (t) {\n  const m = (/^([01]\\d|2[0-3]):([0-5]\\d)$/).exec(String(t || \"\").trim());\n  return m ? Number(m[1]) * 60 + Number(m[2]) : null;\n}",
+          "selfReferencingDataPaths": [],
+          "jsArguments": [
+            {
+              "name": "t"
+            }
+          ]
+        },
+        "runBehaviour": "MANUAL",
+        "dynamicBindingPathList": [
+          {
+            "key": "body"
+          }
+        ],
+        "isValid": true,
+        "invalids": [],
+        "messages": [],
+        "jsonPathKeys": [
+          "function (t) {\n  const m = (/^([01]\\d|2[0-3]):([0-5]\\d)$/).exec(String(t || \"\").trim());\n  return m ? Number(m[1]) * 60 + Number(m[2]) : null;\n}"
+        ],
+        "userSetOnLoad": false,
+        "confirmBeforeExecute": false,
+        "policyMap": {},
+        "userPermissions": [],
+        "createdAt": "2026-11-24T14:53:02Z"
+      },
+      "gitSyncId": "6b05a3dd177cd4bd6b01e9b8_a3425add-10b2-4524-84be-33aaa86adff3",
+      "id": "Page1_Rules.toMin",
+      "deleted": false
+    },
+    {
+      "pluginType": "JS",
+      "pluginId": "js-plugin",
+      "unpublishedAction": {
+        "name": "fmt",
+        "fullyQualifiedName": "Rules.fmt",
+        "datasource": {
+          "name": "UNUSED_DATASOURCE",
+          "pluginId": "js-plugin",
+          "messages": [],
+          "isAutoGenerated": false,
+          "deleted": false,
+          "policyMap": {},
+          "policies": [],
+          "userPermissions": []
+        },
+        "pageId": "Page1",
+        "collectionId": "Page1_Rules",
+        "actionConfiguration": {
+          "timeoutInMillisecond": 10000,
+          "paginationType": "NONE",
+          "encodeParamsToggle": true,
+          "body": "function (min) {\n  return String(Math.floor(min / 60)).padStart(2, \"0\") + \":\" + String(min % 60).padStart(2, \"0\");\n}",
+          "selfReferencingDataPaths": [],
+          "jsArguments": [
+            {
+              "name": "min"
+            }
+          ]
+        },
+        "runBehaviour": "MANUAL",
+        "dynamicBindingPathList": [
+          {
+            "key": "body"
+          }
+        ],
+        "isValid": true,
+        "invalids": [],
+        "messages": [],
+        "jsonPathKeys": [
+          "function (min) {\n  return String(Math.floor(min / 60)).padStart(2, \"0\") + \":\" + String(min % 60).padStart(2, \"0\");\n}"
+        ],
+        "userSetOnLoad": false,
+        "confirmBeforeExecute": false,
+        "policyMap": {},
+        "userPermissions": [],
+        "createdAt": "2026-11-24T14:53:02Z"
+      },
+      "publishedAction": {
+        "name": "fmt",
+        "fullyQualifiedName": "Rules.fmt",
+        "datasource": {
+          "name": "UNUSED_DATASOURCE",
+          "pluginId": "js-plugin",
+          "messages": [],
+          "isAutoGenerated": false,
+          "deleted": false,
+          "policyMap": {},
+          "policies": [],
+          "userPermissions": []
+        },
+        "pageId": "Page1",
+        "collectionId": "Page1_Rules",
+        "actionConfiguration": {
+          "timeoutInMillisecond": 10000,
+          "paginationType": "NONE",
+          "encodeParamsToggle": true,
+          "body": "function (min) {\n  return String(Math.floor(min / 60)).padStart(2, \"0\") + \":\" + String(min % 60).padStart(2, \"0\");\n}",
+          "selfReferencingDataPaths": [],
+          "jsArguments": [
+            {
+              "name": "min"
+            }
+          ]
+        },
+        "runBehaviour": "MANUAL",
+        "dynamicBindingPathList": [
+          {
+            "key": "body"
+          }
+        ],
+        "isValid": true,
+        "invalids": [],
+        "messages": [],
+        "jsonPathKeys": [
+          "function (min) {\n  return String(Math.floor(min / 60)).padStart(2, \"0\") + \":\" + String(min % 60).padStart(2, \"0\");\n}"
+        ],
+        "userSetOnLoad": false,
+        "confirmBeforeExecute": false,
+        "policyMap": {},
+        "userPermissions": [],
+        "createdAt": "2026-11-24T14:53:02Z"
+      },
+      "gitSyncId": "6b05a3dd177cd4bd6b01e9b8_d3836f48-4b1e-43dc-9a6e-be636caf3722",
+      "id": "Page1_Rules.fmt",
+      "deleted": false
+    },
+    {
+      "pluginType": "JS",
+      "pluginId": "js-plugin",
+      "unpublishedAction": {
+        "name": "check",
+        "fullyQualifiedName": "Rules.check",
+        "datasource": {
+          "name": "UNUSED_DATASOURCE",
+          "pluginId": "js-plugin",
+          "messages": [],
+          "isAutoGenerated": false,
+          "deleted": false,
+          "policyMap": {},
+          "policies": [],
+          "userPermissions": []
+        },
+        "pageId": "Page1",
+        "collectionId": "Page1_Rules",
+        "actionConfiguration": {
+          "timeoutInMillisecond": 10000,
+          "paginationType": "NONE",
+          "encodeParamsToggle": true,
+          "body": "function (nowText, startText, durationText, blocked) {\n  const bad = (code, text) => ({\n    available: false,\n    reasonCode: code,\n    message: \"Validation error: \" + text\n  });\n  const now = Rules.toMin(nowText);\n  if (now === null) return bad(\"INVALID_NOW\", \"Current time must be a valid time (HH:MM).\");\n  const start = Rules.toMin(startText);\n  if (start === null) return bad(\"INVALID_START\", \"Start time is required and must be a valid time (HH:MM).\");\n  const raw = String(durationText ?? \"\").trim();\n  if (raw === \"\") return bad(\"INVALID_DURATION\", \"Duration is required.\");\n  const d = Number(raw);\n  if (!Number.isInteger(d)) return bad(\"INVALID_DURATION\", \"Duration must be a whole number of minutes.\");\n  if (d <= 0 || d > Rules.maxDuration) return bad(\"INVALID_DURATION\", \"Duration must be greater than 0 and at most 120 minutes.\");\n  if (start <= now) return bad(\"PAST_START\", \"Start time must be in the future (after \" + Rules.fmt(now) + \").\");\n  if (start + d > 1440) return bad(\"ENDS_NEXT_DAY\", \"The booking must end by 24:00 on the same day.\");\n  const end = start + d;\n  if (blocked === true) return {\n    available: false,\n    reasonCode: \"ROOM_BLOCKED\",\n    message: \"Unavailable: the room is blocked.\"\n  };\n  const hit = Rules.bookings.find(b => start < Rules.toMin(b.end) && Rules.toMin(b.start) < end);\n  if (hit) return {\n    available: false,\n    reasonCode: \"OVERLAP\",\n    message: \"Unavailable: \" + Rules.fmt(start) + \"-\" + Rules.fmt(end) + \" overlaps the existing booking \" + hit.start + \"-\" + hit.end + \" (\" + hit.title + \").\"\n  };\n  return {\n    available: true,\n    reasonCode: \"AVAILABLE\",\n    message: \"Available: \" + Rules.roomName + \" is free from \" + Rules.fmt(start) + \" to \" + Rules.fmt(end) + \".\"\n  };\n}",
+          "selfReferencingDataPaths": [],
+          "jsArguments": [
+            {
+              "name": "nowText"
+            },
+            {
+              "name": "startText"
+            },
+            {
+              "name": "durationText"
+            },
+            {
+              "name": "blocked"
+            }
+          ]
+        },
+        "runBehaviour": "MANUAL",
+        "dynamicBindingPathList": [
+          {
+            "key": "body"
+          }
+        ],
+        "isValid": true,
+        "invalids": [],
+        "messages": [],
+        "jsonPathKeys": [
+          "function (nowText, startText, durationText, blocked) {\n  const bad = (code, text) => ({\n    available: false,\n    reasonCode: code,\n    message: \"Validation error: \" + text\n  });\n  const now = Rules.toMin(nowText);\n  if (now === null) return bad(\"INVALID_NOW\", \"Current time must be a valid time (HH:MM).\");\n  const start = Rules.toMin(startText);\n  if (start === null) return bad(\"INVALID_START\", \"Start time is required and must be a valid time (HH:MM).\");\n  const raw = String(durationText ?? \"\").trim();\n  if (raw === \"\") return bad(\"INVALID_DURATION\", \"Duration is required.\");\n  const d = Number(raw);\n  if (!Number.isInteger(d)) return bad(\"INVALID_DURATION\", \"Duration must be a whole number of minutes.\");\n  if (d <= 0 || d > Rules.maxDuration) return bad(\"INVALID_DURATION\", \"Duration must be greater than 0 and at most 120 minutes.\");\n  if (start <= now) return bad(\"PAST_START\", \"Start time must be in the future (after \" + Rules.fmt(now) + \").\");\n  if (start + d > 1440) return bad(\"ENDS_NEXT_DAY\", \"The booking must end by 24:00 on the same day.\");\n  const end = start + d;\n  if (blocked === true) return {\n    available: false,\n    reasonCode: \"ROOM_BLOCKED\",\n    message: \"Unavailable: the room is blocked.\"\n  };\n  const hit = Rules.bookings.find(b => start < Rules.toMin(b.end) && Rules.toMin(b.start) < end);\n  if (hit) return {\n    available: false,\n    reasonCode: \"OVERLAP\",\n    message: \"Unavailable: \" + Rules.fmt(start) + \"-\" + Rules.fmt(end) + \" overlaps the existing booking \" + hit.start + \"-\" + hit.end + \" (\" + hit.title + \").\"\n  };\n  return {\n    available: true,\n    reasonCode: \"AVAILABLE\",\n    message: \"Available: \" + Rules.roomName + \" is free from \" + Rules.fmt(start) + \" to \" + Rules.fmt(end) + \".\"\n  };\n}"
+        ],
+        "userSetOnLoad": false,
+        "confirmBeforeExecute": false,
+        "policyMap": {},
+        "userPermissions": [],
+        "createdAt": "2026-11-24T14:53:02Z"
+      },
+      "publishedAction": {
+        "name": "check",
+        "fullyQualifiedName": "Rules.check",
+        "datasource": {
+          "name": "UNUSED_DATASOURCE",
+          "pluginId": "js-plugin",
+          "messages": [],
+          "isAutoGenerated": false,
+          "deleted": false,
+          "policyMap": {},
+          "policies": [],
+          "userPermissions": []
+        },
+        "pageId": "Page1",
+        "collectionId": "Page1_Rules",
+        "actionConfiguration": {
+          "timeoutInMillisecond": 10000,
+          "paginationType": "NONE",
+          "encodeParamsToggle": true,
+          "body": "function (nowText, startText, durationText, blocked) {\n  const bad = (code, text) => ({\n    available: false,\n    reasonCode: code,\n    message: \"Validation error: \" + text\n  });\n  const now = Rules.toMin(nowText);\n  if (now === null) return bad(\"INVALID_NOW\", \"Current time must be a valid time (HH:MM).\");\n  const start = Rules.toMin(startText);\n  if (start === null) return bad(\"INVALID_START\", \"Start time is required and must be a valid time (HH:MM).\");\n  const raw = String(durationText ?? \"\").trim();\n  if (raw === \"\") return bad(\"INVALID_DURATION\", \"Duration is required.\");\n  const d = Number(raw);\n  if (!Number.isInteger(d)) return bad(\"INVALID_DURATION\", \"Duration must be a whole number of minutes.\");\n  if (d <= 0 || d > Rules.maxDuration) return bad(\"INVALID_DURATION\", \"Duration must be greater than 0 and at most 120 minutes.\");\n  if (start <= now) return bad(\"PAST_START\", \"Start time must be in the future (after \" + Rules.fmt(now) + \").\");\n  if (start + d > 1440) return bad(\"ENDS_NEXT_DAY\", \"The booking must end by 24:00 on the same day.\");\n  const end = start + d;\n  if (blocked === true) return {\n    available: false,\n    reasonCode: \"ROOM_BLOCKED\",\n    message: \"Unavailable: the room is blocked.\"\n  };\n  const hit = Rules.bookings.find(b => start < Rules.toMin(b.end) && Rules.toMin(b.start) < end);\n  if (hit) return {\n    available: false,\n    reasonCode: \"OVERLAP\",\n    message: \"Unavailable: \" + Rules.fmt(start) + \"-\" + Rules.fmt(end) + \" overlaps the existing booking \" + hit.start + \"-\" + hit.end + \" (\" + hit.title + \").\"\n  };\n  return {\n    available: true,\n    reasonCode: \"AVAILABLE\",\n    message: \"Available: \" + Rules.roomName + \" is free from \" + Rules.fmt(start) + \" to \" + Rules.fmt(end) + \".\"\n  };\n}",
+          "selfReferencingDataPaths": [],
+          "jsArguments": [
+            {
+              "name": "nowText"
+            },
+            {
+              "name": "startText"
+            },
+            {
+              "name": "durationText"
+            },
+            {
+              "name": "blocked"
+            }
+          ]
+        },
+        "runBehaviour": "MANUAL",
+        "dynamicBindingPathList": [
+          {
+            "key": "body"
+          }
+        ],
+        "isValid": true,
+        "invalids": [],
+        "messages": [],
+        "jsonPathKeys": [
+          "function (nowText, startText, durationText, blocked) {\n  const bad = (code, text) => ({\n    available: false,\n    reasonCode: code,\n    message: \"Validation error: \" + text\n  });\n  const now = Rules.toMin(nowText);\n  if (now === null) return bad(\"INVALID_NOW\", \"Current time must be a valid time (HH:MM).\");\n  const start = Rules.toMin(startText);\n  if (start === null) return bad(\"INVALID_START\", \"Start time is required and must be a valid time (HH:MM).\");\n  const raw = String(durationText ?? \"\").trim();\n  if (raw === \"\") return bad(\"INVALID_DURATION\", \"Duration is required.\");\n  const d = Number(raw);\n  if (!Number.isInteger(d)) return bad(\"INVALID_DURATION\", \"Duration must be a whole number of minutes.\");\n  if (d <= 0 || d > Rules.maxDuration) return bad(\"INVALID_DURATION\", \"Duration must be greater than 0 and at most 120 minutes.\");\n  if (start <= now) return bad(\"PAST_START\", \"Start time must be in the future (after \" + Rules.fmt(now) + \").\");\n  if (start + d > 1440) return bad(\"ENDS_NEXT_DAY\", \"The booking must end by 24:00 on the same day.\");\n  const end = start + d;\n  if (blocked === true) return {\n    available: false,\n    reasonCode: \"ROOM_BLOCKED\",\n    message: \"Unavailable: the room is blocked.\"\n  };\n  const hit = Rules.bookings.find(b => start < Rules.toMin(b.end) && Rules.toMin(b.start) < end);\n  if (hit) return {\n    available: false,\n    reasonCode: \"OVERLAP\",\n    message: \"Unavailable: \" + Rules.fmt(start) + \"-\" + Rules.fmt(end) + \" overlaps the existing booking \" + hit.start + \"-\" + hit.end + \" (\" + hit.title + \").\"\n  };\n  return {\n    available: true,\n    reasonCode: \"AVAILABLE\",\n    message: \"Available: \" + Rules.roomName + \" is free from \" + Rules.fmt(start) + \" to \" + Rules.fmt(end) + \".\"\n  };\n}"
+        ],
+        "userSetOnLoad": false,
+        "confirmBeforeExecute": false,
+        "policyMap": {},
+        "userPermissions": [],
+        "createdAt": "2026-11-24T14:53:02Z"
+      },
+      "gitSyncId": "6b05a3dd177cd4bd6b01e9b8_21509101-009d-4151-b7e8-aa43713f7461",
+      "id": "Page1_Rules.check",
+      "deleted": false
+    },
+    {
+      "pluginType": "JS",
+      "pluginId": "js-plugin",
+      "unpublishedAction": {
+        "name": "run",
+        "fullyQualifiedName": "Rules.run",
+        "datasource": {
+          "name": "UNUSED_DATASOURCE",
+          "pluginId": "js-plugin",
+          "messages": [],
+          "isAutoGenerated": false,
+          "deleted": false,
+          "policyMap": {},
+          "policies": [],
+          "userPermissions": []
+        },
+        "pageId": "Page1",
+        "collectionId": "Page1_Rules",
+        "actionConfiguration": {
+          "timeoutInMillisecond": 10000,
+          "paginationType": "NONE",
+          "encodeParamsToggle": true,
+          "body": "async function () {\n  await storeValue(\"result\", Rules.check(inpNow.text, inpStart.text, inpDuration.text, swBlocked.isSwitchedOn), false);\n}",
+          "selfReferencingDataPaths": [],
+          "jsArguments": []
+        },
+        "runBehaviour": "MANUAL",
+        "dynamicBindingPathList": [
+          {
+            "key": "body"
+          }
+        ],
+        "isValid": true,
+        "invalids": [],
+        "messages": [],
+        "jsonPathKeys": [
+          "async function () {\n  await storeValue(\"result\", Rules.check(inpNow.text, inpStart.text, inpDuration.text, swBlocked.isSwitchedOn), false);\n}"
+        ],
+        "userSetOnLoad": false,
+        "confirmBeforeExecute": false,
+        "policyMap": {},
+        "userPermissions": [],
+        "createdAt": "2026-11-24T14:53:02Z"
+      },
+      "publishedAction": {
+        "name": "run",
+        "fullyQualifiedName": "Rules.run",
+        "datasource": {
+          "name": "UNUSED_DATASOURCE",
+          "pluginId": "js-plugin",
+          "messages": [],
+          "isAutoGenerated": false,
+          "deleted": false,
+          "policyMap": {},
+          "policies": [],
+          "userPermissions": []
+        },
+        "pageId": "Page1",
+        "collectionId": "Page1_Rules",
+        "actionConfiguration": {
+          "timeoutInMillisecond": 10000,
+          "paginationType": "NONE",
+          "encodeParamsToggle": true,
+          "body": "async function () {\n  await storeValue(\"result\", Rules.check(inpNow.text, inpStart.text, inpDuration.text, swBlocked.isSwitchedOn), false);\n}",
+          "selfReferencingDataPaths": [],
+          "jsArguments": []
+        },
+        "runBehaviour": "MANUAL",
+        "dynamicBindingPathList": [
+          {
+            "key": "body"
+          }
+        ],
+        "isValid": true,
+        "invalids": [],
+        "messages": [],
+        "jsonPathKeys": [
+          "async function () {\n  await storeValue(\"result\", Rules.check(inpNow.text, inpStart.text, inpDuration.text, swBlocked.isSwitchedOn), false);\n}"
+        ],
+        "userSetOnLoad": false,
+        "confirmBeforeExecute": false,
+        "policyMap": {},
+        "userPermissions": [],
+        "createdAt": "2026-11-24T14:53:02Z"
+      },
+      "gitSyncId": "6b05a3dd177cd4bd6b01e9b8_0400c8ff-bdb2-4188-b6da-b83c8b9d69ec",
+      "id": "Page1_Rules.run",
+      "deleted": false
+    }
+  ],
+  "actionCollectionList": [
+    {
+      "unpublishedCollection": {
+        "name": "Rules",
+        "pageId": "Page1",
+        "pluginId": "js-plugin",
+        "pluginType": "JS",
+        "actions": [],
+        "archivedActions": [],
+        "body": "export default {\n  // Fictional data only - the same three bookings as the code-based version.\n  roomName: \"Study Room A (fictional)\",\n  maxDuration: 120,\n  bookings: [\n    { id: \"B1\", start: \"09:00\", end: \"10:00\", title: \"Algorithms lecture\" },\n    { id: \"B2\", start: \"12:00\", end: \"13:00\", title: \"Study group\" },\n    { id: \"B3\", start: \"14:00\", end: \"15:00\", title: \"Lab session\" }\n  ],\n  toMin (t) {\n    const m = /^([01]\\d|2[0-3]):([0-5]\\d)$/.exec(String(t || \"\").trim());\n    return m ? Number(m[1]) * 60 + Number(m[2]) : null;\n  },\n  fmt (min) {\n    return String(Math.floor(min / 60)).padStart(2, \"0\") + \":\" + String(min % 60).padStart(2, \"0\");\n  },\n  // Same contract: returns { available, reasonCode, message } and never changes this.bookings.\n  check (nowText, startText, durationText, blocked) {\n    const bad = (code, text) => ({ available: false, reasonCode: code, message: \"Validation error: \" + text });\n    const now = this.toMin(nowText);\n    if (now === null) return bad(\"INVALID_NOW\", \"Current time must be a valid time (HH:MM).\");\n    const start = this.toMin(startText);\n    if (start === null) return bad(\"INVALID_START\", \"Start time is required and must be a valid time (HH:MM).\");\n    const raw = String(durationText ?? \"\").trim();\n    if (raw === \"\") return bad(\"INVALID_DURATION\", \"Duration is required.\");\n    const d = Number(raw);\n    if (!Number.isInteger(d)) return bad(\"INVALID_DURATION\", \"Duration must be a whole number of minutes.\");\n    if (d <= 0 || d > this.maxDuration) return bad(\"INVALID_DURATION\", \"Duration must be greater than 0 and at most 120 minutes.\");\n    if (start <= now) return bad(\"PAST_START\", \"Start time must be in the future (after \" + this.fmt(now) + \").\");\n    if (start + d > 1440) return bad(\"ENDS_NEXT_DAY\", \"The booking must end by 24:00 on the same day.\");\n    const end = start + d;\n    if (blocked === true) return { available: false, reasonCode: \"ROOM_BLOCKED\", message: \"Unavailable: the room is blocked.\" };\n    const hit = this.bookings.find(b => start < this.toMin(b.end) && this.toMin(b.start) < end);\n    if (hit) return { available: false, reasonCode: \"OVERLAP\", message: \"Unavailable: \" + this.fmt(start) + \"-\" + this.fmt(end) + \" overlaps the existing booking \" + hit.start + \"-\" + hit.end + \" (\" + hit.title + \").\" };\n    return { available: true, reasonCode: \"AVAILABLE\", message: \"Available: \" + this.roomName + \" is free from \" + this.fmt(start) + \" to \" + this.fmt(end) + \".\" };\n  },\n  async run () {\n    await storeValue(\"result\", this.check(inpNow.text, inpStart.text, inpDuration.text, swBlocked.isSwitchedOn), false);\n  }\n}",
+        "variables": [
+          {
+            "name": "roomName",
+            "value": "\"Study Room A (fictional)\""
+          },
+          {
+            "name": "maxDuration",
+            "value": "120"
+          },
+          {
+            "name": "bookings",
+            "value": "[{\n  id: \"B1\",\n  start: \"09:00\",\n  end: \"10:00\",\n  title: \"Algorithms lecture\"\n}, {\n  id: \"B2\",\n  start: \"12:00\",\n  end: \"13:00\",\n  title: \"Study group\"\n}, {\n  id: \"B3\",\n  start: \"14:00\",\n  end: \"15:00\",\n  title: \"Lab session\"\n}]"
+          }
+        ],
+        "userPermissions": []
+      },
+      "publishedCollection": {
+        "name": "Rules",
+        "pageId": "Page1",
+        "pluginId": "js-plugin",
+        "pluginType": "JS",
+        "actions": [],
+        "archivedActions": [],
+        "body": "export default {\n  // Fictional data only - the same three bookings as the code-based version.\n  roomName: \"Study Room A (fictional)\",\n  maxDuration: 120,\n  bookings: [\n    { id: \"B1\", start: \"09:00\", end: \"10:00\", title: \"Algorithms lecture\" },\n    { id: \"B2\", start: \"12:00\", end: \"13:00\", title: \"Study group\" },\n    { id: \"B3\", start: \"14:00\", end: \"15:00\", title: \"Lab session\" }\n  ],\n  toMin (t) {\n    const m = /^([01]\\d|2[0-3]):([0-5]\\d)$/.exec(String(t || \"\").trim());\n    return m ? Number(m[1]) * 60 + Number(m[2]) : null;\n  },\n  fmt (min) {\n    return String(Math.floor(min / 60)).padStart(2, \"0\") + \":\" + String(min % 60).padStart(2, \"0\");\n  },\n  // Same contract: returns { available, reasonCode, message } and never changes this.bookings.\n  check (nowText, startText, durationText, blocked) {\n    const bad = (code, text) => ({ available: false, reasonCode: code, message: \"Validation error: \" + text });\n    const now = this.toMin(nowText);\n    if (now === null) return bad(\"INVALID_NOW\", \"Current time must be a valid time (HH:MM).\");\n    const start = this.toMin(startText);\n    if (start === null) return bad(\"INVALID_START\", \"Start time is required and must be a valid time (HH:MM).\");\n    const raw = String(durationText ?? \"\").trim();\n    if (raw === \"\") return bad(\"INVALID_DURATION\", \"Duration is required.\");\n    const d = Number(raw);\n    if (!Number.isInteger(d)) return bad(\"INVALID_DURATION\", \"Duration must be a whole number of minutes.\");\n    if (d <= 0 || d > this.maxDuration) return bad(\"INVALID_DURATION\", \"Duration must be greater than 0 and at most 120 minutes.\");\n    if (start <= now) return bad(\"PAST_START\", \"Start time must be in the future (after \" + this.fmt(now) + \").\");\n    if (start + d > 1440) return bad(\"ENDS_NEXT_DAY\", \"The booking must end by 24:00 on the same day.\");\n    const end = start + d;\n    if (blocked === true) return { available: false, reasonCode: \"ROOM_BLOCKED\", message: \"Unavailable: the room is blocked.\" };\n    const hit = this.bookings.find(b => start < this.toMin(b.end) && this.toMin(b.start) < end);\n    if (hit) return { available: false, reasonCode: \"OVERLAP\", message: \"Unavailable: \" + this.fmt(start) + \"-\" + this.fmt(end) + \" overlaps the existing booking \" + hit.start + \"-\" + hit.end + \" (\" + hit.title + \").\" };\n    return { available: true, reasonCode: \"AVAILABLE\", message: \"Available: \" + this.roomName + \" is free from \" + this.fmt(start) + \" to \" + this.fmt(end) + \".\" };\n  },\n  async run () {\n    await storeValue(\"result\", this.check(inpNow.text, inpStart.text, inpDuration.text, swBlocked.isSwitchedOn), false);\n  }\n}",
+        "variables": [
+          {
+            "name": "roomName",
+            "value": "\"Study Room A (fictional)\""
+          },
+          {
+            "name": "maxDuration",
+            "value": "120"
+          },
+          {
+            "name": "bookings",
+            "value": "[{\n  id: \"B1\",\n  start: \"09:00\",\n  end: \"10:00\",\n  title: \"Algorithms lecture\"\n}, {\n  id: \"B2\",\n  start: \"12:00\",\n  end: \"13:00\",\n  title: \"Study group\"\n}, {\n  id: \"B3\",\n  start: \"14:00\",\n  end: \"15:00\",\n  title: \"Lab session\"\n}]"
+          }
+        ],
+        "userPermissions": []
+      },
+      "gitSyncId": "6b05a3dd177cd4bd6b01e9b8_aa0ca34e-6787-4100-949e-f6ee998204f7",
+      "id": "Page1_Rules",
+      "deleted": false
+    }
+  ],
+  "editModeTheme": {
+    "name": "Default-New",
+    "displayName": "Modern",
+    "isSystemTheme": true,
+    "deleted": false
+  },
+  "publishedTheme": {
+    "name": "Default-New",
+    "displayName": "Modern",
+    "isSystemTheme": true,
+    "deleted": false
+  }
+}
