@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smart Campus Room Availability Checker - code-based</title>
+<style>
+  :root { --ink:#1d2433; --muted:#5b6475; --line:#d9dee7; --ok:#11734b; --okbg:#e6f6ee; --bad:#a8261b; --badbg:#fdecea; --warn:#8a5a00; --warnbg:#fff4dc; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; color:var(--ink); background:#f5f7fa; }
+  main { max-width: 900px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { font-size: 1.45rem; margin: 0 0 4px; }
+  .sub { color: var(--muted); margin: 0 0 20px; }
+  .grid { display:grid; grid-template-columns: 1.3fr 1fr; gap:16px; }
+  @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } }
+  .card { background:#fff; border:1px solid var(--line); border-radius:12px; padding:16px; }
+  h2 { font-size: 1rem; margin: 0 0 12px; }
+  label { display:block; font-size:.85rem; color:var(--muted); margin-bottom:10px; }
+  input, select { display:block; width:100%; margin-top:4px; padding:8px 10px; font:inherit; color:var(--ink); border:1px solid var(--line); border-radius:8px; background:#fff; }
+  .row { display:grid; grid-template-columns: 1fr 1fr; gap:10px; }
+  @media (max-width: 420px) { .row { grid-template-columns: 1fr; } }
+  button { font:inherit; padding:9px 14px; border-radius:8px; border:1px solid var(--ink); cursor:pointer; background:var(--ink); color:#fff; }
+  button.secondary { background:#fff; color:var(--ink); }
+  .result { margin-top:14px; padding:12px 14px; border-radius:10px; }
+  .result:empty { display:none; }
+  .result small { display:block; color:var(--muted); margin-top:4px; font-family:Consolas,monospace; }
+  .ok { background:var(--okbg); color:var(--ok); }
+  .bad { background:var(--badbg); color:var(--bad); }
+  .warn { background:var(--warnbg); color:var(--warn); }
+  ul { margin:0; padding-left:18px; }
+  .hint { color:var(--muted); font-size:.8rem; margin-top:12px; }
+  .tests { margin-top:16px; overflow-x:auto; }
+  table { border-collapse:collapse; width:100%; font-size:.85rem; }
+  th, td { border:1px solid var(--line); padding:6px 8px; text-align:left; vertical-align:top; }
+  tr.pass td:last-child { color:var(--ok); font-weight:700; }
+  tr.fail td:last-child { color:var(--bad); font-weight:700; }
+  #tests-summary { font-weight:700; margin-left:10px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Smart Campus Room Availability Checker</h1>
+  <p class="sub">Code-based version (Practice #13). Fictional data only - nothing is booked or saved.</p>
+  <div class="grid">
+    <section class="card">
+      <h2 id="room-name"></h2>
+      <form id="form" novalidate>
+        <label>Current time (reference clock) <input id="now" maxlength="5" autocomplete="off"></label>
+        <div class="row">
+          <label>Start time (HH:MM) <input id="start" maxlength="5" placeholder="10:30" autocomplete="off"></label>
+          <label>Duration (minutes) <input id="duration" maxlength="4" inputmode="numeric" placeholder="60" autocomplete="off"></label>
+        </div>
+        <label>Room status
+          <select id="status"><option value="open">Open</option><option value="blocked">Blocked</option></select>
+        </label>
+        <button type="submit">Check availability</button>
+      </form>
+      <div id="result" class="result" role="status" aria-live="polite"></div>
+    </section>
+    <section class="card">
+      <h2>Existing bookings (read-only)</h2>
+      <ul id="bookings"></ul>
+      <p class="hint">Rules: start must be after the current time, duration 1-120 minutes, a blocked room or an overlapping booking makes the room unavailable. Touching endpoints are allowed.</p>
+    </section>
+  </div>
+  <section class="card tests">
+    <h2>Acceptance tests T1-T8 <button id="run-tests" class="secondary" type="button">Run tests</button><span id="tests-summary"></span></h2>
+    <table><thead><tr><th>ID</th><th>Case</th><th>Expected</th><th>Observed</th><th>Result</th></tr></thead><tbody id="tests-body"></tbody></table>
+  </section>
+</main>
+<script>
+// Smart Campus Room Availability Checker - booking rules (no DOM code here).
+// Shared contract: inputs = start time, duration, blocked flag, fictional bookings
+// (+ the reference "current time"); output = { available, reasonCode, message }.
+
+const ROOM_NAME = "Study Room A (fictional)";
+const MAX_DURATION = 120; // AC2
+const MINUTES_PER_DAY = 1440;
+const DEFAULT_NOW = "08:30"; // fixed reference clock, so the tests are repeatable
+
+// Fictional bookings, no real personal data. Frozen so a check can never change them (AC5).
+const BOOKINGS = Object.freeze([
+  Object.freeze({ id: "B1", start: "09:00", end: "10:00", title: "Algorithms lecture" }),
+  Object.freeze({ id: "B2", start: "12:00", end: "13:00", title: "Study group" }),
+  Object.freeze({ id: "B3", start: "14:00", end: "15:00", title: "Lab session" }),
+]);
+
+// ---------- 1. Validation (AC1, AC2, AC6) ----------
+function parseTime(value) {
+  if (typeof value !== "string") return null;
+  const m = /^([01]\d|2[0-3]):([0-5]\d)$/.exec(value.trim());
+  return m ? Number(m[1]) * 60 + Number(m[2]) : null;
+}
+
+function fmt(min) {
+  return String(Math.floor(min / 60)).padStart(2, "0") + ":" + String(min % 60).padStart(2, "0");
+}
+
+function invalid(reasonCode, text) {
+  return { ok: false, result: { available: false, reasonCode, message: "Validation error: " + text } };
+}
+
+function validateRequest(req) {
+  const now = parseTime(req.now ?? DEFAULT_NOW);
+  if (now === null) return invalid("INVALID_NOW", "Current time must be a valid time (HH:MM).");
+  const start = parseTime(req.startTime);
+  if (start === null) return invalid("INVALID_START", "Start time is required and must be a valid time (HH:MM).");
+  const raw = typeof req.duration === "string" ? req.duration.trim() : req.duration;
+  if (raw === "" || raw === null || raw === undefined) return invalid("INVALID_DURATION", "Duration is required.");
+  const duration = Number(raw);
+  if (!Number.isInteger(duration)) return invalid("INVALID_DURATION", "Duration must be a whole number of minutes.");
+  if (duration <= 0 || duration > MAX_DURATION)
+    return invalid("INVALID_DURATION", `Duration must be greater than 0 and at most ${MAX_DURATION} minutes.`);
+  if (start <= now) return invalid("PAST_START", `Start time must be in the future (after ${fmt(now)}).`);
+  if (start + duration > MINUTES_PER_DAY) return invalid("ENDS_NEXT_DAY", "The booking must end by 24:00 on the same day.");
+  if (typeof req.blocked !== "boolean") return invalid("INVALID_STATUS", "Room status must be Open or Blocked.");
+  return { ok: true, value: { start, end: start + duration, blocked: req.blocked } };
+}
+
+// ---------- 2. Availability calculation (AC3, AC4, AC5) ----------
+function overlaps(aStart, aEnd, bStart, bEnd) {
+  return aStart < bEnd && bStart < aEnd; // touching endpoints are not an overlap
+}
+
+function calculateAvailability({ start, end, blocked }, bookings) {
+  if (blocked) return { available: false, reasonCode: "ROOM_BLOCKED", message: "Unavailable: the room is blocked." };
+  const hit = bookings.find((b) => overlaps(start, end, parseTime(b.start), parseTime(b.end)));
+  if (hit)
+    return {
+      available: false,
+      reasonCode: "OVERLAP",
+      message: `Unavailable: ${fmt(start)}-${fmt(end)} overlaps the existing booking ${hit.start}-${hit.end} (${hit.title}).`,
+    };
+  return { available: true, reasonCode: "AVAILABLE", message: `Available: ${ROOM_NAME} is free from ${fmt(start)} to ${fmt(end)}.` };
+}
+
+// Public entry point: validation first, then the deterministic decision. Read-only on bookings.
+function checkRoom(req, bookings = BOOKINGS) {
+  const v = validateRequest(req);
+  return v.ok ? calculateAvailability(v.value, bookings) : v.result;
+}
+
+const Rules = { ROOM_NAME, MAX_DURATION, DEFAULT_NOW, BOOKINGS, parseTime, fmt, validateRequest, calculateAvailability, checkRoom };
+if (typeof module !== "undefined") module.exports = Rules;
+
+// The common test inputs T1-T8, prepared before implementation and used for BOTH solutions.
+// Reference current time for every case: 08:30. Bookings: 09:00-10:00, 12:00-13:00, 14:00-15:00.
+const CASES = [
+  { id: "T1", name: "Valid free interval", input: { startTime: "10:30", duration: 60, blocked: false }, expect: { available: true, reasonCode: "AVAILABLE" }, expected: "Available" },
+  { id: "T2", name: "Overlap with an existing booking", input: { startTime: "09:30", duration: 60, blocked: false }, expect: { available: false, reasonCode: "OVERLAP" }, expected: "Unavailable (overlap 09:00-10:00)" },
+  { id: "T3", name: "Blocked room", input: { startTime: "10:30", duration: 60, blocked: true }, expect: { available: false, reasonCode: "ROOM_BLOCKED" }, expected: "Unavailable (blocked)" },
+  { id: "T4", name: "Duration = 0", input: { startTime: "10:30", duration: 0, blocked: false }, expect: { available: false, reasonCode: "INVALID_DURATION" }, expected: "Validation error" },
+  { id: "T5", name: "Duration = 121 minutes", input: { startTime: "10:30", duration: 121, blocked: false }, expect: { available: false, reasonCode: "INVALID_DURATION" }, expected: "Validation error" },
+  { id: "T6", name: "Past start time", input: { startTime: "08:00", duration: 30, blocked: false }, expect: { available: false, reasonCode: "PAST_START" }, expected: "Validation error" },
+  { id: "T7", name: "Adjacent non-overlapping interval", input: { startTime: "10:00", duration: 120, blocked: false }, expect: { available: true, reasonCode: "AVAILABLE" }, expected: "Available (10:00-12:00 touches both bookings)" },
+  { id: "T8", name: "Booking data unchanged after checks", input: null, expect: null, expected: "Bookings identical before and after T1-T7" },
+];
+if (typeof module !== "undefined") module.exports = CASES;
+
+// UI display only: reads the form, calls Rules.checkRoom, shows the result.
+// All text goes through textContent (no innerHTML), so user input can never become HTML.
+(function () {
+  const $ = (id) => document.getElementById(id);
+  const form = $("form"), result = $("result"), list = $("bookings");
+
+  $("now").value = Rules.DEFAULT_NOW;
+  $("room-name").textContent = Rules.ROOM_NAME;
+
+  function renderBookings() {
+    list.replaceChildren();
+    for (const b of Rules.BOOKINGS) {
+      const li = document.createElement("li");
+      li.textContent = `${b.start}-${b.end}  ${b.title}`;
+      list.appendChild(li);
+    }
+  }
+
+  function show(res) {
+    result.className = "result " + (res.available ? "ok" : res.message.startsWith("Validation") ? "warn" : "bad");
+    result.replaceChildren();
+    const head = document.createElement("strong");
+    head.textContent = res.available ? "Available" : res.message.startsWith("Validation") ? "Invalid input" : "Unavailable";
+    const msg = document.createElement("div");
+    msg.textContent = res.message;
+    const code = document.createElement("small");
+    code.textContent = `available=${res.available}  reasonCode=${res.reasonCode}`;
+    result.append(head, msg, code);
+  }
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    show(Rules.checkRoom({
+      now: $("now").value,
+      startTime: $("start").value,
+      duration: $("duration").value,
+      blocked: $("status").value === "blocked",
+    }));
+  });
+  form.addEventListener("input", () => { result.className = "result"; result.replaceChildren(); });
+
+  // Self-test panel: runs the shared cases T1-T8 against the same rules the form uses.
+  $("run-tests").addEventListener("click", () => {
+    const body = $("tests-body");
+    body.replaceChildren();
+    const before = JSON.stringify(Rules.BOOKINGS);
+    let passed = 0;
+    for (const c of CASES) {
+      let observed, pass;
+      if (c.input) {
+        const r = Rules.checkRoom({ now: Rules.DEFAULT_NOW, ...c.input });
+        observed = `${r.available ? "Available" : r.message.startsWith("Validation") ? "Validation error" : "Unavailable"} (${r.reasonCode})`;
+        pass = r.available === c.expect.available && r.reasonCode === c.expect.reasonCode;
+      } else {
+        const same = JSON.stringify(Rules.BOOKINGS) === before && Rules.BOOKINGS.length === 3;
+        observed = same ? "Bookings identical" : "Bookings changed";
+        pass = same;
+      }
+      if (pass) passed++;
+      const tr = document.createElement("tr");
+      for (const t of [c.id, c.name, c.expected, observed, pass ? "PASS" : "FAIL"]) {
+        const td = document.createElement("td");
+        td.textContent = t;
+        tr.appendChild(td);
+      }
+      tr.className = pass ? "pass" : "fail";
+      body.appendChild(tr);
+    }
+    $("tests-summary").textContent = `${passed} / ${CASES.length} passed`;
+  });
+
+  renderBookings();
+})();
+
+</script>
+</body>
+</html>

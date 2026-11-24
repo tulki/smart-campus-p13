@@ -1,0 +1,58 @@
+TAP version 13
+# Subtest: baseline: free interval is available
+ok 1 - baseline: free interval is available
+  ---
+  duration_ms: 0.910668
+  type: 'test'
+  ...
+# Subtest: baseline: overlap is unavailable
+ok 2 - baseline: overlap is unavailable
+  ---
+  duration_ms: 0.144715
+  type: 'test'
+  ...
+# Subtest: baseline: blocked room is unavailable
+ok 3 - baseline: blocked room is unavailable
+  ---
+  duration_ms: 0.088112
+  type: 'test'
+  ...
+# Subtest: baseline: more than 120 minutes is rejected
+ok 4 - baseline: more than 120 minutes is rejected
+  ---
+  duration_ms: 0.084869
+  type: 'test'
+  ...
+# Subtest: baseline: start not after current time is rejected
+ok 5 - baseline: start not after current time is rejected
+  ---
+  duration_ms: 0.958422
+  type: 'test'
+  ...
+# Subtest: baseline: touching endpoints are allowed
+ok 6 - baseline: touching endpoints are allowed
+  ---
+  duration_ms: 0.130347
+  type: 'test'
+  ...
+# Subtest: baseline: start >= end is rejected
+ok 7 - baseline: start >= end is rejected
+  ---
+  duration_ms: 0.158951
+  type: 'test'
+  ...
+# Subtest: baseline: bookings are not changed
+ok 8 - baseline: bookings are not changed
+  ---
+  duration_ms: 0.102928
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 75.435583
